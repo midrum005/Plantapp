@@ -1,10 +1,9 @@
-ext {
-    minSdkVersion = 22
-    compileSdkVersion = 36  // แก้จาก 34 เป็น 36
-    targetSdkVersion = 36   // แก้จาก 34 เป็น 36
-    androidxActivityVersion = '1.11.0'
-    androidxAppCompatVersion = '1.7.0'
-    androidxCoordinatorLayoutVersion = '1.2.0'
-    androidxCoreVersion = '1.17.0'
-    // ... ตัวแปรอื่นๆ ...
+android {
+    compileSdk 36  // แก้ตรงนี้
+    defaultConfig {
+        applicationId "com.example.app"
+        minSdk 22
+        targetSdk 36 // และตรงนี้
+        // ...
+    }
 }
