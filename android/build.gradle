@@ -1,19 +1,29 @@
-// android/app/build.gradle
-plugins {
-    id 'com.android.application'
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Android Gradle Plugin
+        classpath 'com.android.tools.build:gradle:8.2.1'
+
+        // Google Services (Firebase)
+        classpath 'com.google.gms:google-services:4.4.0'
+
+        // Kotlin Gradle Plugin (รองรับ Java 21)
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
+    }
 }
 
-apply from: "../variables.gradle"
+apply from: "variables.gradle"
 
-android {
-    namespace "com.example.plantapp"
-    compileSdkVersion rootProject.ext.compileSdkVersion
-
-    defaultConfig {
-        applicationId "com.example.plantapp"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
     }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
