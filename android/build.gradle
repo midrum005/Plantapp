@@ -1,4 +1,4 @@
-apply from: "../variables.gradle"
+apply from: "variables.gradle"
 
 android {
     namespace "com.example.plantapp"
