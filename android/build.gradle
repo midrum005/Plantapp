@@ -1,4 +1,9 @@
-apply from: "variables.gradle"
+// android/app/build.gradle
+apply from: "../variables.gradle"
+
+plugins {
+    id 'com.android.application'
+}
 
 android {
     namespace "com.example.plantapp"
