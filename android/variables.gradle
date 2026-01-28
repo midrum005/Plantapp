@@ -1,9 +1,8 @@
-android {
-    compileSdk 36  // แก้ตรงนี้
-    defaultConfig {
-        applicationId "com.example.app"
-        minSdk 22
-        targetSdk 36 // และตรงนี้
-        // ...
-    }
+// variables.gradle
+ext {
+    compileSdkVersion = 34
+    minSdkVersion = 24
+    targetSdkVersion = 34
+    versionCode = 1
+    versionName = "1.0"
 }
